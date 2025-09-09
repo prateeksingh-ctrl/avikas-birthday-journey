@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/avikas-birthday-journey/static/css/main.584a4191.css",
+    "main.js": "/avikas-birthday-journey/static/js/main.191846e1.js",
+    "static/js/453.ab7780b5.chunk.js": "/avikas-birthday-journey/static/js/453.ab7780b5.chunk.js",
+    "index.html": "/avikas-birthday-journey/index.html",
+    "main.584a4191.css.map": "/avikas-birthday-journey/static/css/main.584a4191.css.map",
+    "main.191846e1.js.map": "/avikas-birthday-journey/static/js/main.191846e1.js.map",
+    "453.ab7780b5.chunk.js.map": "/avikas-birthday-journey/static/js/453.ab7780b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.584a4191.css",
+    "static/js/main.191846e1.js"
+  ]
+}
