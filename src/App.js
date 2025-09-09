@@ -7,10 +7,10 @@ const KeyIcon = ({ className }) => (<svg className={className} xmlns="http://www
 const LockIcon = ({ className }) => (<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>);
 
 const treasureHuntQuestions = [
-    { question: "Among the countless stars in our universe, one word describes the moment our paths first crossed. What was it?", answer: "magic", hint: "It's a force that's felt, not seen, and it starts with 'M'." },
-    { question: "Your spirit is a radiant force that brightens even the darkest nights. What do I call the light you bring into my world?", answer: "sunshine", hint: "It's the name of the star our world revolves around." },
-    { question: "We found a place where the water mirrored the sky, and for a moment, time stood still. Where did we find our tranquil universe?", answer: "the lake", hint: "Think of a large body of still water." },
-    { question: "You balance the cosmos within you—the playful energy of a nebula and the calm wisdom of a galaxy. What color, like the twilight sky, were you wearing when I first saw this balance?", answer: "blue", hint: "It's the color of the Earth as seen from the moon." }
+    { question: "every time a shooting star happens, one thing i wish for you everytime?", answer: "smile", hint: "It's something i want for you, and it starts with 's'." },
+    { question: "Your spirit is a radiant force that brightens even the darkest nights. What do I call you for the energy you carry", answer: "sunshine", hint: "It's the name of the star our world revolves around." },
+    { question: "We found a place where , and for a moment, time stood still. Where did we first meet?", answer: "kalkaji park", hint: "our go-to place." },
+    { question: "You balance the cosmos within you—the playful energy of a nebula and the calm wisdom of a galaxy. What color was i wearing that you complimented the most?", answer: "black", hint: "It's my favourite now." }
 ];
 const galleryImages = [
     { src: "https://placehold.co/600x800/2C2A4A/FFD700?text=First+Constellation", caption: "The day it all began." },
@@ -21,15 +21,15 @@ const galleryImages = [
     { src: "https://placehold.co/600x800/7C77A6/FFD700?text=Your+Supernova\\nSmile", caption: "My favorite smile." }
 ];
 const letters = [
-    { title: "To My Starlight,", content: "They say that we are all made of stardust, and meeting you, I've never been more certain of it. You have a universe within you—the brilliant, chaotic energy of a newborn star, and the calm, profound wisdom of an ancient galaxy. Your soul is pure and kind, a constant source of light. I feel so lucky to be in your orbit." },
-    { title: "For Your Solar Return...", content: "I wanted to craft an experience that mirrored the magic you bring into my life. This isn't just a website; it's a small galaxy built just for you, full of memories we've made and adventures yet to come. I hope it makes you feel as special as you are to me. Happy Birthday, Avika. Here's to another trip around the sun, together." }
+    { title: "To My Sunshine,", content: "They say that we are all made of stardust, and meeting you, I've never been more certain of it. You have a universe within you—the brilliant, chaotic energy of a newborn star, and the calm, profound wisdom of an ancient galaxy. Your soul is pure and kind, a constant source of light. I feel so lucky to be in your orbit." },
+    { title: "for you my baby", content: "I wanted to craft an experience that mirrored the magic you bring into my life. This isn't just a website; it's a small galaxy built just for you, full of memories we've made and adventures yet to come. I hope it makes you feel as special as you are to me. Happy Birthday, Avika. Here's to another trip around the sun, together." }
 ];
 const dayPlan = [
     "A peaceful start, aligning our stars at Hanuman Mandir",
     "A supernova of sweetness: the perfect birthday cake",
-    "A journey through time and space at the National Museum",
-    "A tranquil walk through the celestial Garden of Five Senses",
-    "Ending the day with your favorite cosmic cuisine!"
+    "A journey through time and space at the National crafts museum followed by a pottery sesion",
+    "A tranquil walk through the lodhi garden, hand in hand",
+    "Ending the day with your favorite ramen at mr k ramyun!"
 ];
 
 // --- Animation Variants for Framer Motion ---
@@ -118,10 +118,10 @@ const NewsletterEntry = ({ onSubmit }) => {
         </div>
     );
 };
-
 const CountdownTimer = ({ onComplete }) => {
-    const calculateTargetDate = () => { const now = new Date(); now.setSeconds(now.getSeconds() + 5); return now; };
-    const [targetDate] = useState(calculateTargetDate);
+    // const calculateTargetDate = () => { const now = new Date(); now.setSeconds(now.getSeconds() + 5); return now; };
+    const [targetDate] = useState(new Date('2025-09-16T00:00:00')); 
+    // const [targetDate] = useState(calculateTargetDate);
     const [timeLeft, setTimeLeft] = useState({});
 
     useEffect(() => {
@@ -155,7 +155,7 @@ const CountdownTimer = ({ onComplete }) => {
                                     initial={{ y: -20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: 20, opacity: 0 }}
-                                    transition={{ duration: 0.3 }}
+                                    transition={{ duration: 0.5 }}
                                 >
                                     {String(timeLeft[part] || 0).padStart(2, '0')}
                                 </motion.div>
@@ -227,8 +227,8 @@ const BirthdayCelebration = ({ onComplete }) => {
                 <AnimatePresence>
                     {stage >= 2 && (
                         <motion.img 
-                            src="https://i.pinimg.com/originals/ab/49/54/ab49545f6534e3576142a781ce72d244.gif" 
-                            alt="Magical sparkling birthday cake"
+                            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJsemJkaGU2cjAyZzJzaGY2N3J5OHB0c3FpY3BodHdlbHd4Mjd2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9rO5Aksmn0dHQKXJAu/giphy.gif" 
+                            alt="celebrating another year around the sun"
                             className="w-48 h-48 md:w-64 md:h-64 mx-auto mt-4"
                             initial={{ scale: 0, opacity: 0, rotate: -180 }}
                             animate={{ scale: 1, opacity: 1, rotate: 0 }}
