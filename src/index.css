@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&family=Dancing+Script:wght@700&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black font-body text-indigo-100 antialiased;
+    cursor: default;
+    overflow-x: hidden;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-body {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-handwriting {
+    font-family: 'Dancing Script', cursive;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* --- New Animated Starfield Background --- */
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
 }
+
+#star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+#stars, #stars2, #stars3 {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  background: transparent;
+}
+
+#stars {
+ background-image: 
+    radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat:repeat;
+  background-size: 200px 200px;
+  animation: move-twink-back 200s linear infinite;
+}
+
+#stars2 {
+  background-image: 
+    radial-gradient(1px 1px at 10px 90px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 30px 110px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 80px 20px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 120px 140px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 150px 30px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 180px 180px, #ddd, rgba(0,0,0,0));
+  background-repeat:repeat;
+  background-size: 300px 300px;
+  animation: move-twink-back 150s linear infinite;
+}
+
+#stars3 {
+   background-image: 
+    radial-gradient(2px 2px at 5px 150px, #eee, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 25px 50px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 70px 180px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 110px 100px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 140px 10px, #fff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 170px 130px, #ddd, rgba(0,0,0,0));
+  background-repeat:repeat;
+  background-size: 400px 400px;
+  animation: move-twink-back 100s linear infinite;
+}
+
+.celestial-theme {
+  background-color: #0c0a1a; /* Deep space blue */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.glassmorphism-card {
+  @apply bg-indigo-900/10 backdrop-blur-xl p-8 rounded-2xl shadow-2xl shadow-indigo-500/10 border border-indigo-500/20;
+}
+
+.celestial-heading {
+  text-shadow: 0 0 15px rgba(253, 224, 71, 0.4), 0 0 5px rgba(253, 224, 71, 0.3);
+}
+
+/* --- Birthday Celebration Animations --- */
+.animated-birthday-text-celestial {
+  @apply font-display text-amber-100;
+  font-size: clamp(2.5rem, 10vw, 5rem);
+  text-shadow: 0 0 20px rgba(253, 224, 71, 0.5);
+}
+
+.continue-button {
+    @apply mt-8 inline-block px-8 py-3 bg-white/10 border border-amber-300/50 rounded-full text-amber-200 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-400/20;
+}
+
+/* --- Treasure Hunt and Gift Animations --- */
+.key-button { @apply inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-br from-amber-400 to-amber-500 text-amber-950 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-amber-400/30; animation: key-glow 2s infinite alternate; }
+@keyframes key-glow { from { box-shadow: 0 0 15px #fde047; } to { box-shadow: 0 0 30px #fcd34d, 0 0 10px #fde047; } }
+
+.gift-box-base { @apply absolute bottom-0 w-full h-3/4 bg-gradient-to-b from-indigo-800 to-indigo-900 rounded-b-lg; }
+.gift-box-lid { @apply absolute top-0 w-[110%] left-[-5%] h-1/4 bg-indigo-700 rounded-t-lg; transform-origin: top; }
+.gift-box-ribbon-v { @apply absolute left-1/2 -translate-x-1/2 w-4 h-full bg-amber-400; }
+.gift-box-ribbon-h { @apply absolute top-[calc(25%-0.5rem)] -translate-y-1/2 h-4 w-full bg-amber-400; }
+
+
+/* --- Gallery Styling --- */
+.polaroid { @apply bg-indigo-100 p-3 pb-12 sm:p-4 sm:pb-16 rounded-sm shadow-lg relative; }
+.polaroid img { @apply border-b-2 border-indigo-200; }
+.polaroid .caption { @apply absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 text-center font-handwriting text-lg sm:text-xl text-indigo-900; }
+
