@@ -13,12 +13,12 @@ const treasureHuntQuestions = [
     { question: "You balance the cosmos within you—the playful energy of a nebula and the calm wisdom of a galaxy. What color was i wearing that you complimented the most?", answer: "black", hint: "It's my favourite now." }
 ];
 const galleryImages = [
-    { src: "https://placehold.co/600x800/2C2A4A/FFD700?text=First+Constellation", caption: "The day it all began." },
-    { src: "https://placehold.co/600x800/4F4A78/FFD700?text=Cosmic+Adventure", caption: "Adventures with you." },
-    { src: "https://placehold.co/600x800/9B95C9/FFD700?text=Movie+Night\\nUnder+the+Stars", caption: "My favorite co-star." },
-    { src: "https://placehold.co/600x800/1A182E/FFD700?text=Dancing+in\\na+Meteor+Shower", caption: "Who needs sunshine anyway?" },
-    { src: "https://placehold.co/600x800/3E3B68/FFD700?text=Galaxy\\Gazing", caption: "Walking by your side." },
-    { src: "https://placehold.co/600x800/7C77A6/FFD700?text=Your+Supernova\\nSmile", caption: "My favorite smile." }
+    { src: "https://res.cloudinary.com/dx0kghc8w/image/upload/v1757871466/IMG-20240515-WA0001_bfvndz.jpg", caption: "The day it all began." },
+    { src: "https://res.cloudinary.com/dx0kghc8w/image/upload/v1757871468/Snapchat-1008955613_xijj5s.jpg", caption: "Adventures with you." },
+    { src: "https://res.cloudinary.com/dx0kghc8w/image/upload/v1757871466/WhatsApp_Image_2025-08-23_at_19.28.48_n2hqnl.jpg", caption: "My favorite co-star." },
+    { src: "https://res.cloudinary.com/dx0kghc8w/image/upload/v1757871466/IMG_20241124_133150_243_isfzm0.jpg", caption: "Who needs sunshine anyway?" },
+    { src: "https://res.cloudinary.com/dx0kghc8w/image/upload/v1757871468/Snapchat-1008955613_xijj5s.jpg", caption: "Walking by your side." },
+    { src: "https://res.cloudinary.com/dx0kghc8w/image/upload/v1757871466/IMG-20250823-WA0023_yd0udp.jpg", caption: "My favorite smile." }
 ];
 const letters = [
     { title: "To My Sunshine,", content: "They say that we are all made of stardust, and meeting you, I've never been more certain of it. You have a universe within you—the brilliant, chaotic energy of a newborn star, and the calm, profound wisdom of an ancient galaxy. Your soul is pure and kind, a constant source of light. I feel so lucky to be in your orbit." },
